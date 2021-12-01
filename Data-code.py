@@ -8,14 +8,16 @@ import seaborn as sns
 od.download('https://www.kaggle.com/iabhishekofficial/mobile-price-classification')
 
 st.title("Mobile Phone Data")
-dt = pd.read_csv("mobile-price-classification/test.csv")
+dt = pd.read_csv("mobile-price-classification/train.csv")
+df = pd.read_csv("mobile-price-classification/test.csv")
+
 # print(dt.describe())
 
 
 # pie
 st.subheader("Shows the pie graph for number of mobiles using Bluetooth")
 fig1 = plt.figure(figsize=(12 , 7))
-gg = dict(dt.groupby('blue')['blue'].count())
+gg = dict(df.groupby('blue')['blue'].count())
 plt.pie(gg.values(), labels=gg.keys(), autopct='%1.0f%%')
 st.pyplot(fig1)
 
