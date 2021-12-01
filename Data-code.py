@@ -43,9 +43,9 @@ st.pyplot(fig2)
 #scatter-graph for Ram and Battery
 st.subheader("Scatter graph between RAM and BATTERY")
 fig3 = plt.figure(figsize=(12 , 7))
-plt.scatter(dt.ram, dt.battery_power)
+plt.scatter(dt.ram, dt.fc)
 plt.xlabel('Ram(MB)')
-plt.ylabel('Battery(Mah)')
+plt.ylabel('Camera(Mpx)')
 st.pyplot(fig3)
 
 
