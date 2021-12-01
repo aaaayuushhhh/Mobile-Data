@@ -16,7 +16,7 @@ dt = pd.read_csv("mobile-price-classification/test.csv")
 st.subheader("Shows the pie graph for number of mobiles using Bluetooth")
 fig1 = plt.figure(figsize=(12 , 7))
 gg = dict(dt.groupby('blue')['blue'].count())
-plt.pie(gg.values(), labels=gg.keys())
+plt.pie(gg.values(), labels=gg.keys(), autopct='%1.0f%%')
 st.pyplot(fig1)
 
 
