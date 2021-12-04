@@ -32,7 +32,7 @@ st.write(np.mean(list(Battery_mean)))
 
 
 #bar-graph for battery and cam
-st.subheader("Shows Bar graph for battery and camera in stats in smartphones")
+st.subheader("Shows Bar graph for battery and camera stats in smartphones")
 fig2 = plt.figure(figsize=(12 , 7))
 plt.bar(dt.battery_power, dt.fc)
 plt.xlabel('Battery(Mah)')
